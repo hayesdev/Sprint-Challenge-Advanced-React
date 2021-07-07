@@ -1,26 +1,21 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import { PlayerList } from "./components/PlayerList";
+import { Nav } from "./components/Nav";
+
+import "./App.css";
+
+class App extends React.Component {
+  render() {
+    return (
+      <div className="App">
+        <Nav />
+        <h1>Women's World Cup Player Interest</h1>
+        <h3>By Google Search Interest</h3>
+        <PlayerList />
+      </div>
+    );
+  }
 }
 
 export default App;
